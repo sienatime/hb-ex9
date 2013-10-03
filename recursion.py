@@ -7,9 +7,7 @@ def multiply_list(l):
 
 # factorial(0) will run forever.
 def factorial(l):
-    if l == 0:
-        return 0
-    elif l == 1:
+    if l <= 1:
         return 1
     return l * factorial(l-1)
 
@@ -53,8 +51,7 @@ def palindrome(some_string):
     if len(some_string) == 1 or len(some_string) == 0:
         return True
     if some_string[0] == some_string[-1]:
-        palindrome(some_string[1:-1])
-        return True
+        return palindrome(some_string[1:-1])
     else:
         return False
 
